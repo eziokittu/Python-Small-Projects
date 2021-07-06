@@ -20,16 +20,20 @@ def dic1():
         d1[input("Tell the word for that meaning : ")] = input("\nExplain the meaning : ")
 
         # this "more" vaiable gets the string input
-        more = input("Want to enter more data to the dictionary ? (y/n) : ")
-        if (more.lower() == 'n' or 
-            more.lower() == 'no' or
-            more.lower() == 'no more' or
-            more.lower() == 'stop' or
-            more.lower() == 'quit'):
+        more = input("Want to enter more data to the dictionary (default: NO) ? (y for YES) : ")
+
+        if (more.lower() != 'Y' or 
+            more.lower() != 'y' or
+            more.lower() != 'Yes' or
+            more.lower() != 'yes' or
+            more.lower() != 'quit'):
             break
 
-    print("\n\nPrinting the dictionary : ") 
-    print(d1, end="\n\n")
+    print("\nPrinting the dictionary : ") 
+    for key, value in d1.items():
+        print(str(key) + " : " + str(value), end = "\n")
+
+    print("\n")
 
 # This is the required code defined as a function
 def dic2():
@@ -44,7 +48,5 @@ def dic2():
 
 # the program starts from here
 if __name__=="__main__":
-    # dic1()
-    dic2()
-
-    
+    #dic1()
+    dic2()  
