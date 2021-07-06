@@ -1,7 +1,7 @@
 # Health Management System
 
 # Directory for the files where they will be created
-dir = "CodeWithHarry/assets/"
+dir = "CodeWithHarry_Python/assets/"
 
 # 2 functions
 def getdate():
