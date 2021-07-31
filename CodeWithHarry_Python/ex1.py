@@ -3,30 +3,26 @@
 # and return the meaning of
 # the word from the dictionary
 
-moreWordsForDictionary = True
-
 # A class named "dictionary" having two fundamental data types: string, string
 class dictionary:
     def __init__(self, _word, _meaning):
         self.word = _word
         self.meaning = _meaning
 
-# This is function 1
+# Custom Function
 def dic1():
+    """This is supposed to be a function that takes both meaning and definition from the user and then asks the user if they want to enter more data. Then finally it prints the dictionary."""
+
     d1 = {} #Creating an object "d1" of the class "dictionary"
 
     # loop will run until the user wants no more words to insert in the dictionary
-    while(moreWordsForDictionary):
+    while(True):
         d1[input("Tell the word for that meaning : ")] = input("\nExplain the meaning : ")
 
         # this "more" vaiable gets the string input
         more = input("Want to enter more data to the dictionary (default: NO) ? (y for YES) : ")
 
-        if (more.lower() != 'Y' or 
-            more.lower() != 'y' or
-            more.lower() != 'Yes' or
-            more.lower() != 'yes' or
-            more.lower() != 'quit'):
+        if (more.lower() != 'y'):
             break
 
     print("\nPrinting the dictionary : ") 
@@ -48,5 +44,6 @@ def dic2():
 
 # the program starts from here
 if __name__=="__main__":
-    #dic1()
-    dic2()  
+    #print(dic1.__doc__)
+    dic1() 
+    #dic2()
